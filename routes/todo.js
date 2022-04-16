@@ -115,7 +115,7 @@ router.delete('/:id',async(req,res,next) => {
 
 //desc : fetch finished todos
 //method : get
-router.get('/',auth,async(req,res,next) => {
+router.get('/finished',auth,async(req,res,next) => {
     try {
         const todo = await Todo.find({
             user: req.user.id, 
